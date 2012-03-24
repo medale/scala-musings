@@ -24,16 +24,9 @@ class CompanyParser {
       factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, true);
       val fileReader = new FileReader(file)
       eventReader = factory.createXMLEventReader(fileReader)
-      //work off preamble etc. until getting to the root company element
-      while (eventReader.hasNext()) {
+      if (eventReader.hasNext()) {
         val currEvent = eventReader.nextTag()
-        val eventType = currEvent.getEventType()
-        eventType match {
-          case START_DOCUMENT => println("Start document: " + currEvent)
-          case START_ELEMENT => handleCompanyRootElement(currEvent.asStartElement())
-          case END_DOCUMENT => println("End document: " + currEvent)
-          case other => println("Event number was: " + other)
-        }
+        handleCompanyRootElement(currEvent.asStartElement())
       }
       parseResult = Right(parsedValuesMap)
     } catch {
