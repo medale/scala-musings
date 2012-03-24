@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Company xmlns="http://company.org" 
+	xmlns:dept="http://department.org"
+	xmlns:emp="http://employee.org">
+	<Name>General Panic</Name>
+	<dept:Department>
+		<dept:Name>Shipping</dept:Name>
+		<dept:Employees>
+			<emp:Employee id="234560">
+				<emp:FirstName>Terry</emp:FirstName>
+				<emp:LastName>Buehler</emp:LastName>
+			</emp:Employee>
+			<emp:Employee id="123456">
+				<emp:FirstName>Darth</emp:FirstName>
+				<emp:LastName>Vader</emp:LastName>
+			</emp:Employee>
+		</dept:Employees>
+	</dept:Department>
+	<dept:Department>
+		<dept:Name>Software</dept:Name>
+		<dept:Employees>
+			<emp:Employee id="001122">
+				<emp:FirstName>Princess</emp:FirstName>
+				<emp:LastName>Leia</emp:LastName>
+			</emp:Employee>
+			<emp:Employee id="001123">
+				<emp:FirstName>Luke</emp:FirstName>
+				<emp:LastName>Skywalker</emp:LastName>
+			</emp:Employee>
+		</dept:Employees>
+	</dept:Department>
+</Company>
